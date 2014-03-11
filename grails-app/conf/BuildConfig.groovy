@@ -1,11 +1,13 @@
 grails.project.work.dir = 'target'
 
 grails.project.dependency.resolution = {
-	inherits("global") 
-	log "warn" // log level of Ivy resolver, either 'error', 'warn', 'info', 'debug' or 'verbose'
+
+	inherits 'global'
+	log "warn"
 
 	repositories {
 		grailsCentral()
+		mavenLocal()
 		mavenCentral()
 	}
 
@@ -14,14 +16,12 @@ grails.project.dependency.resolution = {
 	}
 
 	plugins {
-		runtime ":resources:1.2"
 		runtime ":hibernate:$grailsVersion", {
 			export = false
 		}
 
-		build(":tomcat:$grailsVersion",
-				":release:2.2.1",
-				":rest-client-builder:1.0.3") {
+		runtime ":resources:1.2"
+		build(":release:2.2.1", ":rest-client-builder:1.0.3") {
 			export = false
 		}
 	}
