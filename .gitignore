@@ -1,0 +1,8 @@
+# Grails files
+/target/
+
+# Eclipse files
+/.classpath
+/.project
+/.settings/
+/target-eclipse/
