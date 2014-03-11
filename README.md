@@ -2,27 +2,38 @@
 
 ## Installation
 
-**TODO**
+Add this line in `BuildConfig`
+
+``` 
+plugins {
+    ...
+    compile ":asual-lesscss-resources:0.1"
+}
+```
 
 ## Usage
 
 An Example of using both .less and .css files together in a bundle
 
-    'style' {
-        resource url:'less/test.less',attrs:[rel: "stylesheet/less", type:'css'], bundle:'bundle_style'
-        resource url:'css/normal.css'
-        resource url:'css/normal2.css'
-    }
+```
+'style' {
+    resource url:'less/test.less',attrs:[rel: "stylesheet/less", type:'css'], bundle:'bundle_style'
+    resource url:'css/normal.css'
+    resource url:'css/normal2.css'
+}
+```
 
 ### Import
 
 LESS supports importing of other less/css files. This is supported in asual-lesscss-resources.
 
-   @import "imported_style.less";
+```
+@import "imported_style.less";
+```
 
 ### Options
 
-**TODO**
+**TODO** : grails.resources.lesscss.compressed = false
 
 ## License
 
